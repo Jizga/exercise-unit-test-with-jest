@@ -5,19 +5,15 @@ let oneEuroIs = {
 }
 
 const fromEuroToDollar = (euro) => {
-    return dollar = euro * oneEuroIs.USD;
+    return dollar = Number((euro * oneEuroIs.USD).toFixed(2));
 }
 
 const fromDollarToYen = (dollar) => {
-    return yen = (dollar * oneEuroIs.JPY) / oneEuroIs.USD;
+    return yen = Number(((dollar * oneEuroIs.JPY) / oneEuroIs.USD).toFixed(2));
 }
 
 const fromYanToPound = (yen) => {
-    return pound = (yen * oneEuroIs.GBP) / oneEuroIs.JPY;
+    return pound = Number(((yen * oneEuroIs.GBP) / oneEuroIs.JPY).toFixed(2)) ;
 }
-
-console.log('Euros to Dollars: ', fromEuroToDollar(5))
-console.log('Dollars to Yens: ', fromDollarToYen(5))
-console.log('Yens to british pound: ', fromYanToPound(500))
 
 module.exports = { fromEuroToDollar, fromDollarToYen, fromYanToPound };
