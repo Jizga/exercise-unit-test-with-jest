@@ -5,15 +5,15 @@ let oneEuroIs = {
 }
 
 const fromEuroToDollar = (euro) => {
-    return dollar = euro * 1.2;
+    return dollar = euro * oneEuroIs.USD;
 }
 
 const fromDollarToYen = (dollar) => {
-    return yen = (dollar * 127.9) / 1.2;
+    return yen = (dollar * oneEuroIs.JPY) / oneEuroIs.USD;
 }
 
 const fromYanToPound = (yen) => {
-    return pound = (yen * 0.8) / 127.9;
+    return pound = (yen * oneEuroIs.GBP) / oneEuroIs.JPY;
 }
 
 console.log('Euros to Dollars: ', fromEuroToDollar(5))
